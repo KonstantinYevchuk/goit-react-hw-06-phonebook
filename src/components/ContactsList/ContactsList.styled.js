@@ -16,19 +16,19 @@ export const Item = styled.li`
     align-items: center;
 `;
 
-export const Button = styled.button`
-    padding: 5px 7px;
-    color: white;
-    background-color: blue;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 5px; 
-    outline: none;
-    transition: all 300ms ease-in-out;
+// export const Button = styled.button`
+//     padding: 5px 7px;
+//     color: white;
+//     background-color: blue;
+//     cursor: pointer;
+//     border: 1px solid transparent;
+//     border-radius: 5px; 
+//     outline: none;
+//     transition: all 300ms ease-in-out;
     
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-        background-color: orange; 
-    }
-`
+//     &:hover,
+//     &:focus {
+//         transform: scale(1.1);
+//         background-color: orange; 
+//     }
+// `
