@@ -1,14 +1,14 @@
 import { FilterContainer } from "./Filter.styled";
 import { Label, Input } from "components/Form/Form.styled";
 import { useDispatch } from "react-redux";
-import { filterContact } from "redux/contactsSlice";
-// import { contactsFilter } from "redux/contactsFilter";
+import { setStatusFilter } from "redux/contactsFilter";
+
 export const Filter = () => {
 
     const dispatch = useDispatch(); 
     const filterInput = e => {
       const { value } = e.currentTarget;
-      dispatch(filterContact(value))
+      dispatch(setStatusFilter(value))
     }
     return (
         <FilterContainer>

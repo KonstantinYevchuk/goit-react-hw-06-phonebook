@@ -1,14 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { statusFilters } from "./constans";
+
+const filtersInitialState = {
+  status: statusFilters.text,
+};
+
 
 const filtersSlice = createSlice({
   name: "filters",
-  initialState: '',
+  initialState: filtersInitialState,
   reducers: {
-    contactsFilter(state, action) {
-      state.filter(contact => contact.includes(action.payload));
+    setStatusFilter(state, action) {
+      state.status = action.payload;
     },
   },
 });
 
-export const { contactsFilter } = filtersSlice.actions;
+export const { setStatusFilter } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;
