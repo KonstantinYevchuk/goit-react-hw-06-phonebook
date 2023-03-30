@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addContact } from "redux/contactsSlice";
 // import { useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { FormContainer, Label, Input, Btn } from './Form.styled';
 
 export const Form = ({submit}) => {
@@ -75,6 +75,6 @@ export const Form = ({submit}) => {
           );
     
 }
-Form.propTypes = {
-    submit: PropTypes.func.isRequired
-}
+// Form.propTypes = {
+//     submit: PropTypes.func.isRequired
+// }
