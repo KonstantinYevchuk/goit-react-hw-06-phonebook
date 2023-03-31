@@ -11,7 +11,7 @@ import { List, Item } from './ContactsList.styled';
 export const ContactsList = () => {
     const contacts = useSelector(getContacts);
     const filter = useSelector(getFilter);
-   
+    
     const filteredContacts = contacts.filter(contact => 
     contact.name.toLowerCase().includes(filter.toLowerCase()));
     return (
