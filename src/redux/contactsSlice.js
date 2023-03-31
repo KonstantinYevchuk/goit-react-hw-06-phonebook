@@ -2,7 +2,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 // import { persistReducer } from 'redux-persist';
 // import storage from 'redux-persist/lib/storage';
 
-const contactsInitialState = [];
+const contactsInitialState = { items: [] };
 // const STORAGE = 'contact';
 // const getSavedContacts = () => {
 //   const savedContacts = localStorage.getItem(STORAGE);
@@ -18,11 +18,11 @@ const constacsSlice = createSlice({
   reducers: {
     addContact: {
       reducer(state, action) {
-        state.some(contact => contact.name === action.payload.name)
+        state.items.some(contact => contact.name === action.payload.name)
           ? alert(
               `${action.payload.name}, Contact with such name is already exists!`
-            )
-          : state.push(action.payload);
+            ) :
+          state.items.push(action.payload);
         // localStorage.setItem(STORAGE, JSON.stringify(state));
       },
       prepare({ name, number }) {
@@ -36,8 +36,7 @@ const constacsSlice = createSlice({
       },
     },
     deleteContact(state, action) {
-      return state.filter(contact => contact.id !== action.payload);
-
+      state.items = state.items.filter(item => item.id !== action.payload);
       // const index = state.findIndex(contact => contact.id === action.payload);
       // state.splice(index, 1);
     },
